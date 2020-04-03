@@ -19,12 +19,18 @@ public class Logic {
 	private String breed;
 	private String date;
 	
+	private BreedDog breedDog;
+	private DateDog dateDog;
+	private NameDog nameDog;
+	private AgeDog ageDog;
+	
 	public Logic (PApplet app) {
 		this.app = app;
 		
-		
-		
-		
+		breedDog = new BreedDog();
+		dateDog = new DateDog();
+		nameDog = new NameDog();
+		ageDog = new AgeDog();
 		
 		datos = app.loadStrings ("../data/datosUno.txt");
 		datosDos = app.loadStrings("../data/datosDos.txt");
@@ -60,16 +66,24 @@ public class Logic {
 
 	public void sortList(char i) {
 		switch (i) {
-		case 'n':
+		case 'i':
 			Collections.sort(dog);
-			for (int j = 0; j < dog.size(); j++) {
-				
+			
+			/*for (int j = 0; j < dog.size(); j++) {
 				System.out.println(dog.get(j).getId());
-			}
-			
-			
+			}*/
 			break;
-			
+		case 'b':
+			Collections.sort(dog, breedDog);
+			break;
+		case 'd':
+			Collections.sort(dog, dateDog);
+			break;
+		case 'n' :
+			Collections.sort(dog, nameDog);
+			break;
+		case 'a' :
+			Collections.sort(dog, ageDog);
 		}
 	}
 	

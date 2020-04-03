@@ -6,7 +6,7 @@ import processing.core.PApplet;
 public class Main extends PApplet {
 	
 	private ControllerMain createMain;
-	private ControllerMain sortListMain;
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,7 +20,7 @@ public class Main extends PApplet {
 	
 	public void  setup () {
 		createMain = new ControllerMain (this);
-		sortListMain = new ControllerMain (this);
+		
 		
 	}
 	
@@ -34,7 +34,7 @@ public class Main extends PApplet {
 	}
 	
 	public void keyPressed () {
-		sortListMain.sortListController(key);
+		createMain.sortListController(key);
 	}
 	
 
