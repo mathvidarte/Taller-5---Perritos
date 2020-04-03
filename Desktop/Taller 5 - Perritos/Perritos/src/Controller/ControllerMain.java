@@ -17,5 +17,9 @@ public class ControllerMain {
 	public LinkedList<Dog> dog () {
 		return logics.getDog();
 	}
+	
+	public void sortListController (char i) {
+		logics.sortList(i);
+	}
 
 }

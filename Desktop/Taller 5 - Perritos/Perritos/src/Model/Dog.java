@@ -2,7 +2,7 @@ package Model;
 
 import processing.core.PApplet;
 
-public class Dog {
+public class Dog implements Comparable <Dog> {
 	private String name, age, breed, date;
 	private int id;
 	private int posX;
@@ -22,14 +22,26 @@ public class Dog {
 	
 	public void drawDog (int posY, PApplet app) {
 		app.fill(255);
-		app.text (this.name, posX, posY);
-		app.text (this.age, posX+ 50, posY);
-		app.text (this.breed, posX + 100, posY);
-		app.text (this.id, posX + 150, posY);
-		app.text (this.date, posX+ 200, posY);
+		app.text("ID", 50, 45);
+		app.text (this.id, posX, posY);
+		app.text("NAME", 100, 45);
+		app.text (this.name, posX + 50, posY);
+		app.text("AGE", 190, 45);
+		app.text (this.age, posX+ 150, posY);
+		app.text("BREED", 280, 45);
+		app.text (this.breed, posX + 220, posY);
+		app.text("BIRTH DATE", 460, 45);
+		app.text (this.date, posX+ 400, posY);
 
 		
 	}
+	
+	public int compareTo(Dog otherDog) {
+		return this.id - otherDog.getId();
+		
+	}
+	
+	
 
 	public String getName() {
 		return name;
@@ -94,6 +106,8 @@ public class Dog {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	
 	
 	
 	
