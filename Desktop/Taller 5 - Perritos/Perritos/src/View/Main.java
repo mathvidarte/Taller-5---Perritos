@@ -5,8 +5,8 @@ import processing.core.PApplet;
 
 public class Main extends PApplet {
 	
-	ControllerMain createMain;
-	ControllerMain sortListMain;
+	private ControllerMain createMain;
+	private ControllerMain sortListMain;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

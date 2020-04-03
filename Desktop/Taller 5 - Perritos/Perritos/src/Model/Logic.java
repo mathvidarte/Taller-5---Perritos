@@ -1,5 +1,6 @@
 package Model;
 
+
 import java.util.Collections;
 import java.util.LinkedList;
 
@@ -56,18 +57,26 @@ public class Logic {
 	public void setDog (LinkedList<Dog> dog) {
 		this.dog = dog;
 	}
-	
-	public void sortList (char i) {
+
+	public void sortList(char i) {
 		switch (i) {
-		case 'i': 
+		case 'n':
 			Collections.sort(dog);
+			for (int j = 0; j < dog.size(); j++) {
+				
+				System.out.println(dog.get(j).getId());
+			}
+			
+			
 			break;
+			
 		}
-	
 	}
+	
+}
 	
 	
 	
 	
 
-}
+

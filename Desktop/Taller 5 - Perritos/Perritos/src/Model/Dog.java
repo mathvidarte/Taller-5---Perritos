@@ -36,10 +36,7 @@ public class Dog implements Comparable <Dog> {
 		
 	}
 	
-	public int compareTo(Dog otherDog) {
-		return this.id - otherDog.getId();
-		
-	}
+	
 	
 	
 
@@ -105,6 +102,11 @@ public class Dog implements Comparable <Dog> {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	
+	public int compareTo(Dog newDog) {
+		return this.id - newDog.getId();
 	}
 
 	
